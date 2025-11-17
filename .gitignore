@@ -1,0 +1,16 @@
+# Virtual environment
+.venv/
+venv/
+
+# Data files - these should NOT be uploaded
+formatted_animation_data.json
+generated_animation.json
+*.json
+
+# Python
+__pycache__/
+*.pyc
+
+# Model weights
+*.pth
+*.pt
