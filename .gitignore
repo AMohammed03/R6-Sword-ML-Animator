@@ -11,6 +11,8 @@ generated_animation.json
 __pycache__/
 *.pyc
 
-# Model weights
+# Model weights (ignore all except the trained model)
 *.pth
 *.pt
+# Exception: allow the trained model to be committed
+!trained_model.pth

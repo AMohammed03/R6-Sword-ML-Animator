@@ -259,9 +259,17 @@ def main():
 
     final_train_lost = train_model(model, X_train, y_train, CONFIG)
 
+    torch.save({
+        'model_state_dict': model.state_dict(),
+        'feature_cols': feature_cols,
+        'num_features': num_features,
+        'max_keyframes': max_keyframes,
+        'config': CONFIG,
+    }, 'trained_model.pth')
+    
     test_loss, predictions = evaluate_model(model, X_test, y_test)
 
-    test_pattern = [2, 8]
+    test_pattern = [6, 4]
     generated = generate_animation(model, test_pattern, feature_cols, num_features, max_keyframes)
     save_animation(generated, CONFIG['output_file'])
 
