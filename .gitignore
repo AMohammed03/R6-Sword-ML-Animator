@@ -14,5 +14,14 @@ __pycache__/
 # Model weights (ignore all except the trained model)
 *.pth
 *.pt
+
 # Exception: allow the trained model to be committed
 !trained_model.pth
+
+# Duplicate/temporary files
+generate_cli.py
+
+# PyInstaller build files
+build/
+dist/
+*.spec
